@@ -1,12 +1,12 @@
 <form method="post" action="/dashboard/album" class="form" enctype="multipart/form-data">
-    <h1 class="title">create album</h1>
+    <h1 class="title">Update album</h1>
     <label for="title" class="label">title</label>
     <input class="input" type="text" id="title" name="title" value="test album">
 
     <label for="select-artist">artist</label>
     <select id="select-artist" name="artist" class="input">
         {{!-- YOUR CODE HERE --}}
-        {{#each artists}}
+        {{#each album.artist}}
         <option value="{{this._id}}">{{this.name}}</option>
         {{/each}}
     </select>
@@ -29,5 +29,5 @@
     <input class="is-hidden" type="file" id="cover" name="cover">
 
 
-    <button class="btn">create</button>
+    <button class="btn">Update</button>
 </form>
